@@ -9,6 +9,20 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//DataBase Connection - try to connect an log a pass/fail result!
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://GeidyRuiz:123sakura@clustermanager.1eeyb.mongodb.net/tasks',
+    {
+    userNewUrlParser: true,
+    useUnifiedTopology: true
+    }).then(
+        (res) =>
+        {
+            console.log('Connection to MongoDB')
+        }).catch(() =>
+        {
+            console.log('Connection Error')
+        })
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
