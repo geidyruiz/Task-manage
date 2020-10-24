@@ -13,7 +13,7 @@ var app = express();
 const mongoose = require('mongoose')
 mongoose.connect('mongodb+srv://GeidyRuiz:123sakura@clustermanager.1eeyb.mongodb.net/tasks',
     {
-    userNewUrlParser: true,
+    useNewUrlParser: true,
     useUnifiedTopology: true
     }).then(
         (res) =>
