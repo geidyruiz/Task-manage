@@ -16,4 +16,4 @@ const taskSchema = new mongoose.Schema(
 		priority: Number
 	})
 // make this public
-module.exports = mongoose.model(name:'Task',taskSchema)
+module.exports = mongoose.model('Task',taskSchema)
