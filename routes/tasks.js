@@ -82,11 +82,31 @@ router.get('/edit/:_id', (req, res, next) => {
         }
     })
 })
-
-
-
-
-
+//POST  task/ edit/;_id -> update selected document
+router.post('/edit/:_id', (req, res, next) => {
+    var _id = req.params._id
+    //parse checkbox to bool
+    var complete = false
+    if (req.body.complete == "on")
+        complete = true
+    console.log('Complete: ' + req.body.complete)
+    //instatiate a task Object with the new values from the submission
+    var task = new Task({
+        _id: _id,
+        name: req.body.name,
+        priority: req.body.priority,
+        complete: complete
+    })
+    Task.update({ _id: _id },task, (err) => {
+        if (err) {
+            console.log(err)
+            res.end(err)
+        }
+        else {
+            res.redirect('/tasks')
+        }
+    })
+})
 
 
 //express this file as public
