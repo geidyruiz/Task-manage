@@ -1,13 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bin",
+    "\\config",
+    "\\models",
     "\\public",
-    "\\public\\images",
-    "\\public\\javascripts",
     "\\routes",
     "\\views",
     "\\views\\tasks"
   ],
-  "SelectedNode": "\\public\\javascripts\\scripts.js",
+  "SelectedNode": "\\routes\\tasks.js",
   "PreviewInSolutionExplorer": false
 }

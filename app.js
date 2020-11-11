@@ -12,10 +12,12 @@ var tasksRouter = require('./routes/tasks')
 var app = express();
 
 //DataBase Connection - try to connect an log a pass/fail result!
+
 const mongoose = require('mongoose')
-//const globals = require('./config/globals')
-//mongoose.connect(globals.db,
-mongoose.connect('mongodb+srv://GeidyRuiz:123@clustermanager.1eeyb.mongodb.net/tasks',
+const globals = require('./config/globals')
+mongoose.connect(globals.db,
+
+//mongoose.connect('mongodb+srv://GeidyRuiz:123@clustermanager.1eeyb.mongodb.net/tasks',
 
   {
     useNewUrlParser: true,
